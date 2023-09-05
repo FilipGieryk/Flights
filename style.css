@@ -1,0 +1,70 @@
+@font-face {
+    font-family: diedie;
+    src: url(DIEDIEDI.TTF);
+}
+
+
+.navigation-bar{
+    text-align: center;
+    list-style-type: none;
+    font-family: diedie;
+    display: flex;
+}
+li{
+    float: left;
+    padding-right: 10%;
+}
+a{
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+    font-size: 1.5em;
+}
+a:hover{
+    color: rgb(88, 86, 84);
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: aqua;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+a:hover:after,
+a:focus:after{
+    opacity: 1;
+    transform: translate3d(0,0.2em,0);
+}
+
+li  a::after{
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+}
+
+li a:hover::after,
+li a:focus::after{
+    transform: scale(1);
+}
+.form-popup{
+    display: none;
+}
+.flight-choice{
+    border: solid 1px;
+    width: 80vh;
+    height: 60vh;
+    margin: auto;
+}
+.main-info{
+    display: block;
+    margin: auto;
+    width: fit-content;    
+}
+.chosen-flight-info{
+    display:none
+}

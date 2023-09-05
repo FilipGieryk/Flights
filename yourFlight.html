@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="navigation-bar">
+        <li><a>
+            <picture>
+                <source srcset="aeroplane.avif" type="image/avif" />
+                <source srcset="aeroplane.avif" type="image/webp" />
+                <img
+                width=10% height=10% decoding="async" loading="lazy"
+                src="aeroplane.jpg" alt="home logo"/>
+            </picture>
+        </a></li>
+        <li><a>Your FLight</a></li>
+        <li><a>Manage your Flights</a></li>
+        <li><a>Contact Us</a></li>
+        <li><button class='open-button' onclick='openLoginForm()'>Login</button></li>
+        <li><button class='open-button' onclick='openRegisterForm()'>Register</button></li>
+    </ul>
+
+    <div class="main-info">    
+        <label>Put your flight id to find information about it</label></br>
+        <input></input>
+        <button>search</button>
+    </div>
+
+    <div class="your-flight-by-id-border">
+        <p>ticket id: xxx</p>
+        <p>from: xxx</p>
+        <p>to: xxx</p>
+        <p>start date: xxx</p>
+        <p>end date: xxx</p>
+        <p>number of seats: xxx</p>
+        <p>passengers: hash map </p>
+        
+        
+
+    </div>
+
+</body>
+</html>

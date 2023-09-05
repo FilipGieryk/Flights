@@ -1,0 +1,7 @@
+1. kiedy zalogowany zamien login i register na wyloguj
+
+
+2. kiedy nie zalogowany manage your flights pokazuje login screen 
+
+
+3. contact form

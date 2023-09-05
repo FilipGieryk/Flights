@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flights</title>
+</head>
+    <body>
+        <ul class="navigation-bar">
+                <li><a>
+                    <picture>
+                        <source srcset="aeroplane.avif" type="image/avif" />
+                        <source srcset="aeroplane.avif" type="image/webp" />
+                        <img
+                        width=10% height=10% decoding="async" loading="lazy"
+                        src="aeroplane.jpg" alt="home logo"/>
+                    </picture>
+                </a></li>
+                <li><a>Your FLight</a></li>
+                <li><a>Manage your Flights</a></li>
+                <li><a>Contact Us</a></li>
+                <li><button class='open-button' onclick='openLoginForm()'>Login</button></li>
+                <li><button class='open-button' onclick='openRegisterForm()'>Register</button></li>
+            </ul>
+            <div class="main-info">
+                <h1 class="fligt-choice-header">Flights</h1>
+                <label>From</label>
+                <input></input>
+                <label>To</label>
+                <input></input><br>
+                <label>Start Date</label>
+                <input></input>
+                <label>End Date</label>
+                <input></input>
+                <button>Search</button>
+                
+                
+                
+            </div>
+
+
+
+
+
+
+
+
+        <div class='form-popup' id='loginForm'>
+            <form action="/action_page.html" class="form-container">
+                <h1>Login</h1>
+
+                <label for='login'><b>Login</b></label>
+                <input type="text" placeholder="Login" name="login" required>
+
+                <label for='password'><b>password</b></label>
+                <input type="password" placeholder="Password" name="password" required>
+
+                <button type="submit" class="login-button">Login</button>
+                <button type="button" class="cancel-button" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+        <div class='form-popup' id='registerForm'>
+            <form action="/action_page.html" class="form-container">
+                <h1>Register</h1>
+
+                <label for='login'><b>Login</b></label>
+                <input type="text" placeholder="Login" name="login" required>
+
+                <label for='email'><b>email</b></label>
+                <input type="text" placeholder="Email" name="email" required>
+
+                <label for='password'><b>password</b></label>
+                <input type="password" placeholder="Password" name="password" required>
+
+                <button type="submit" class="login-button">Login</button>
+                <button type="button" class="cancel-button" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+    </body>
+    <script>
+        function openLoginForm() {
+            document.getElementById('registerForm').style.display = 'none'
+            document.getElementById('loginForm').style.display = 'block'
+        }
+        function openRegisterForm() {
+            document.getElementById('loginForm').style.display = 'none'
+            document.getElementById('registerForm').style.display = 'block'
+        }
+        function closeForm() {
+            const closeForm = document.querySelectorAll('#loginForm, #registerForm');
+            closeForm.forEach(element => {
+                element.style.display = "none"
+            })
+        }
+    </script>
+</html>
