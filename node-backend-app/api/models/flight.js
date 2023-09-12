@@ -1,16 +1,16 @@
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-// const flightSchema = mongoose.Schema({
-//     _id: mongoose.Schema.Types.ObjectId,
-//     name: String,
-//     from: String,
-//     To: String,
-//     startDate: Date,
-//     endDate: Date,
-//     numberOfSeats: Number,
-//     takenSeats: Number,
-//     price: Number,
-//     flightTime: Number
-// });
 
-// module.exports = mongoose.model('Flight', flightSchema);
+const flightSchema = mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
+    name: {type: String, required: true},
+    from: {type: String, required: true},
+    to: {type: String, required: true},
+    startDate: {type: Date, required: true},
+    endDate: {type: Date, required: true},
+    numberOfSeats: {type: Number, required: true},
+    price: {type: Number, required: true},
+    flightTime: {type: Number, required: true}
+});
+
+module.exports = mongoose.model('Flight', flightSchema);

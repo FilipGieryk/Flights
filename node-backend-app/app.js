@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 
 const productRoutes = require('./api/routes/flights');
 const orderRoutes = require('./api/routes/orders');
+const userRoutes = require('./api/routes/user');
 
 mongose.connect('mongodb+srv://Midget:' + process.env.MONGO_ATLAS_PW + '@cluster0.h98g88c.mongodb.net/?retryWrites=true&w=majority'
 )
@@ -17,7 +18,7 @@ app.use(bodyParser.json());
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', '*');
+    res.header('Access-Control-Allow-Headers', "Origin, X-Requested-With, Content-Type, Accept, Authorization");
 if (req.method === 'OPTIONS'){
     res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
     return res.status(200).json({});
@@ -27,6 +28,7 @@ next();
 
 app.use('/flights', productRoutes);
 app.use('/orders', orderRoutes);
+app.use('/user', userRoutes);
 
 
 app.use((req,  res, next) =>{
